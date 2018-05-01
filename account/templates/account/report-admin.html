@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+
+    <div class="jumbotron">
+    <div class="container">
+        <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default"
+                      style="width: 200px;"><h1>Month</h1></span>
+
+        </div>
+
+        <br>
+        <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default"
+                      style="width: 200px;">Actual amount </span>
+            {{ actual }}
+
+        </div>
+
+        <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default"
+                      style="width: 200px;">Amount collected</span>
+            {{ spent }}
+
+        </div>
+
+        <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default"
+                      style="width: 200px;">Amount yet to collect</span>
+
+            {{yetto}}
+
+
+        </div>
+
+        <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default"
+                      style="width: 200px;">Amount per user </span>
+            {{ count }}
+
+        </div>
+        </div>
+    <div class="container">
+        <h1>Common Money</h1>
+        {% for foo in common %}
+            {{ foo}} {{ foo.amount }} on {{ foo.date_spent }}{{ foo }}
+            <br>
+                    {{ foo.description }}
+            <br>
+        {% endfor %}
+
+
+
+    </div>
+    </div>
+
+
+
+
+
+
+{% endblock %}

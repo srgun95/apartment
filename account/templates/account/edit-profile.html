@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block body %}
+
+    <form method="post">
+        {% csrf_token %}
+        <div class="jumbotron">
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default"
+                      style="width: 130px;">First Name </span>
+                {{ form.first_name }}
+
+
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default"
+                      style="width: 130px;">Last Name</span> {{ form.last_name }}</div>
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default" style="width: 130px;">E - Mail </span>
+                {{ form.email }}
+
+            </div>
+            <button id="submit" type="submit" class="btn btn-secondary btn-lg " style="\margin-left: 65px;width: 150px">
+                Submit
+            </button>
+        </div>
+    </form>
+{% endblock %}

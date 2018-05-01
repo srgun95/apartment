@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+    <form method="post">
+        {% csrf_token %}
+
+        <div class="jumbotron">
+            <div class="container">
+                <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default"
+                      style="width: 200px;">{{ form.first_name.label }}</span>
+
+                    {{ form.first_name }} &emsp;
+
+
+                </div>
+                <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default"
+                      style="width: 200px;">{{ form.last_name.label }}</span>
+
+                    {{ form.last_name }} &emsp;
+
+
+                </div>
+                <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default"
+                      style="width: 200px;">{{ form.email.label }}</span>
+
+                    {{ form.email }} &emsp;
+
+
+                </div>
+            </div>
+            <div class="container">
+                <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default"
+                      style="width: 200px;">{{ form.username.label }}</span>
+
+                    {{ form.username }} &emsp;
+
+
+                </div>
+                <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default"
+                      style="width: 200px;">{{ form.password1.label }}</span>
+
+                    {{ form.password1 }} &emsp;
+
+
+                </div>
+                <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default"
+                      style="width: 200px;">{{ form.password2.label }}</span>
+
+                    {{ form.password2 }} &emsp;
+
+
+                </div>
+                <button id="submit" type="submit" class="btn btn-secondary btn-lg "
+                        style="margin-left: 140px;width: 150px">
+                    Submit
+                </button>
+            </div>
+
+        </div>
+
+    </form>
+
+
+{% endblock %}

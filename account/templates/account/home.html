@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block body %}
+    {% if user.is_authenticated %}
+        {% if user.get_username == "admin" %}
+
+        {% endif %}
+    {% else %}
+        You are not Logged In
+    {% endif %}
+
+{% endblock %}

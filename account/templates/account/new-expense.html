@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+
+{% block body %}
+
+    <form method="post" xmlns="http://www.w3.org/1999/html">
+        {% csrf_token %}
+        {{ temp }}
+        <div class="jumbotron">
+
+            <div class="input-group mb-3">&emsp;&emsp;{{ form.date_spent }}</div>
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default"
+                      style="width: 130px;">User </span>
+
+                {{ form.user_name }} &emsp;
+
+
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default"
+                      style="width: 130px;">User </span>
+
+                {{ form.name }} &emsp;
+
+
+            </div>
+
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default"
+                      style="width: 130px;">Purpose </span>
+                {{ form.purpose }}
+
+
+            </div>
+
+
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default"
+                      style="width: 130px;">Amount</span>
+                {{ form.amount }}
+
+
+            </div>
+
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default"
+                      style="width: 130px;">Description </span>
+                {{ form.description }}
+
+
+            </div>
+            <button id="submit" type="submit" class="btn btn-secondary btn-lg "
+                    style="\margin-left: 65px;width: 150px">
+                Submit
+            </button>
+
+
+        </div>
+    </form>
+
+
+
+
+
+{% endblock %}

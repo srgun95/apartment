@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block body %}
+    <form method="post">{% csrf_token %}
+        <div class="jumbotron" align="center">
+
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default"
+                      style="width: 130px;">{{ form.username.label }}</span> {{ form.username }}
+            </div>
+            <div class="input-group mb-3" align="center">
+                <span class="input-group-text" id="inputGroup-sizing-default"
+                      style="width: 130px;">{{ form.password.label }}</span> {{ form.password }}
+
+            </div>
+            <button type="submit" class="btn btn-secondary btn-lg " style="margin-left: 65px;width: 150px">Submit</button>
+
+        </div>
+    </form>
+
+
+
+
+
+
+{% endblock %}
